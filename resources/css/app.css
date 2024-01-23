@@ -1,0 +1,13 @@
+.font-color1 {
+    color: #0081A7;
+}
+
+.button-color1 {
+    background-color: #0081A7;
+}
+
+.img-size {
+    width: 100%;
+     height: 350px;
+     object-fit: cover;
+}
