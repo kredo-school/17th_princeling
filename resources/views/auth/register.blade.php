@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-7">
-            <h2>put image here</h2>
+            <img src="{{ asset('img/register.jpeg') }}" class="img-size" alt="Register Image">
         </div>
 
         {{-- Create register --}}
