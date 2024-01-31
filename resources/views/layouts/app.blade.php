@@ -21,7 +21,7 @@
 </head>
 <body>
     <div id="app">
-    @if(!request()->is('user/home') || request()->is('/'))
+    @if(!request()->is('user/home') && request()->is('/') && request()->is('profile/show'))
         <nav class="navbar navbar-expand-md navbar-light bg-color1 shadow-sm">
         <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -76,7 +76,7 @@
         </nav>
         @endif
 
-        <main class="py-4">
+        <main class="py-4 bg-white">
             @yield('content')
         </main>
     </div>
