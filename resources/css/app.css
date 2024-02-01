@@ -6,8 +6,16 @@
     background-color: #0081A7;
 }
 
+.bg-color2 {
+    background-color: #FDFCDC;
+}
+
 .button-color1 {
     background-color: #0081A7;
+}
+
+.button-color1:hover{
+    background-color: #00AFB9;
 }
 
 .img-size {
@@ -23,4 +31,108 @@
 
 .icon-size {
     font-size: 3rem;
+}
+
+.registerpage {
+    background-color: #ffff;
+    padding: 100px;
+}
+
+.loginpage {
+    background-color: #ffff;
+    padding: 120px;
+}
+
+body {
+    background-color: #ffff;
+}
+
+.vertical-menu-container {
+    display: flex;
+  }
+  
+  .vertical-menu {
+    width: 200px;
+    height: 100vh;
+    overflow-y: auto;
+    background-color: #ffff;  
+  }
+  
+  .vertical-menu a {
+    background-color: #ffff;
+    color: black;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+  }
+  
+  .vertical-menu a:hover {
+    background-color: #ccc;
+  }
+  
+  .vertical-menu a.active {
+    background-color: #ffff;
+  }
+  
+   
+  .submenu {
+    display: none;
+  }
+  
+  .vertical-menu .active + .submenu,
+  .vertical-menu a:hover + .submenu {
+    display: block;
+  }
+  
+  .submenu a {
+    background-color: #ffff;
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .submenu a:hover {
+    background-color: #bbb;
+  }
+  
+  .rightonpage {
+    flex: 1;
+    padding: 20px;
+    background-color: #FDFCDC;
+  }
+
+  .progress{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    background-color: #ffff;
+}
+
+.outer{
+    height: 200px;
+    width: 200px;
+    padding: 20px;
+    border-radius: 50%;
+    background-color: #FED9B7;
+    /* box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+    -6px -6px 10px -1px rgba(255, 255, 255, 0.7); */
+    
+}
+
+.inner{
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    background-color: #ffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2), inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+    -0.5px -0.5px 0px rgba(255, 255, 255, 1), 0.5px 0.5px 0px rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0.05); */
+}
+
+#cals{
+    font-weight: 600;
+    color: #555;
 }
