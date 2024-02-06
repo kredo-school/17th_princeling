@@ -21,7 +21,7 @@
 </head>
 <body>
     <div id="app">
-    @if(!request()->is('user/home') && request()->is('/') && request()->is('profile/show'))
+    @if(!request()->is('user/home') && request()->is('/') && request()->is('profile/show') && request()->is('profile/edit'))
         <nav class="navbar navbar-expand-md navbar-light bg-color1 shadow-sm">
         <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
