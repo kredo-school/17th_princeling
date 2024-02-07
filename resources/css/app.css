@@ -14,8 +14,16 @@
     background-color: #0081A7;
 }
 
+.button-color2 {
+    background-color: #F07167;
+}
+
 .button-color1:hover{
     background-color: #00AFB9;
+}
+
+.button-color2:hover {
+    background-color: #FED9B7;
 }
 
 .img-size {
@@ -135,4 +143,23 @@ body {
 #cals{
     font-weight: 600;
     color: #555;
+}
+
+.hr1 {
+    width: 100%;
+}
+
+.input {
+    margin-right: 10px;
+    padding: 10px;
+}
+
+.text-field {
+    display: flex;
+    align-items: center;
+}
+
+.confirm-button {
+    margin-left: 550px;
+
 }
