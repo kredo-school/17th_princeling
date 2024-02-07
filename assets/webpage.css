@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-image: url("public\image\helathy_food.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 55% 100%;
+    opacity: 0.6;
+    margin:0;
+
+}
+.topnav {
+    overflow: hidden;
+    background-color: #0081a7;
+  }
+  
+.topnav a {
+    float: left;
+    color: #fff;
+    text-align: center;
+    padding: 14px 6px;
+    text-decoration: none;
+    font-size: 24px;
+    margin: 0 0 0 auto;
+    height: 25px;
+    width: 100px;
+    float: right;
+  }
+  
+.topnav a:hover {
+    background-color: #00AFB7;
+    color: black;
+  }
+h1{
+    font-size: 64px;
+    color: black;
+    margin: 150px auto 150px 40px;
+}
+.Contactmsg{
+    font-size: 48px;
+    margin: 80px;
+}
+.ContactDetail{
+  font-size: 32px;
+  margin-left: 40px;
+}
+.button{
+  border-radius: 4px;
+  background-color: #0081A7;
+  border: none;
+  color: white;
+  padding: 10px 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  margin-left: 40px;
+  width: 200px;
+  cursor: pointer;
+
+}
+a.button:hover{
+    background: #00AFB9;
+}
