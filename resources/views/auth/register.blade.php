@@ -11,7 +11,6 @@
         {{-- Create register --}}
         <div class="col">
             <h2 class="fw-bold">Create an Account</h2>
-            <p>Have your account? <a href="{{ route('login') }}" class="text-decoration-none">login</a></p>
             <p>Have your account? <a href="{{ route('login') }}" class="text-decoration-none text-dark fw-bold">login</a></p>
             <br>
             <div class="row">
