@@ -1,9 +1,13 @@
 <?php
 
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ChartController;
+use App\Models\TimelineData;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\MealController;
 
 
 /*
@@ -32,3 +36,10 @@ Route::get('/about-us', [PageController::class, 'aboutUs'])->name('about-us');
 
 Route::get('/contact', [PageController::class, 'contact'])->name('contact');
 
+Route::get('/profile/show', [ProfileController::class, 'show'])->name('profile.show');
+
+Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
+
+Route::get('profile/show', [ChartController::class, 'showChart']);
+
+Route::get('/get-chart-data/{timeline}', [ChartController::class, 'getChartData']);
