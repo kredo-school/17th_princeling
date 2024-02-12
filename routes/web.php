@@ -9,7 +9,6 @@ use App\Models\TimelineData;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\MealController;
 
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -43,3 +42,4 @@ Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.e
 Route::get('profile/show', [ChartController::class, 'showChart']);
 
 Route::get('/get-chart-data/{timeline}', [ChartController::class, 'getChartData']);
+
