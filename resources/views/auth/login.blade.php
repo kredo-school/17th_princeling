@@ -7,11 +7,6 @@
                 <div class="col-7">
                     <img src="{{ asset('img/login.jpeg') }}" class="img-size" alt="Login Image">
                 </div>
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-7">
-            <img src="{{ asset('img/login.jpeg') }}" class="img-size" alt="Login Image">
-        </div>
 
         {{-- Create login --}}
         <div class="col">
