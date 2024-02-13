@@ -19,7 +19,7 @@
         </li>
       </ul>
     </nav>
-    <div class="opa-first"></div>
+    <div class="opa-first">
     <div class="banner-text">
       <h1 class="intro">Your Personal <br>Calorie Tracker</h1>
       <a href="{{ route('register') }}" class="button">Sign Up</a>
