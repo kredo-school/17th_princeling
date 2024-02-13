@@ -43,7 +43,6 @@
             </div>
             <div class="row mt-4">
                 <div class="col text-center">
-                    <button type="submit" class="btn btn-primary">Sign up</button>
                     <button type="submit" class="btn button-color1 text-white">Sign up</button>
                 </div>
             </div>
