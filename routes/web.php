@@ -39,6 +39,8 @@ Route::get('/profile/show', [ProfileController::class, 'show'])->name('profile.s
 
 Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
 
+Route::get('/profile/digit-code', [ProfileController::class, 'digit'])->name('digit');
+
 Route::get('profile/show', [ChartController::class, 'showChart']);
 
 Route::get('/get-chart-data/{timeline}', [ChartController::class, 'getChartData']);
