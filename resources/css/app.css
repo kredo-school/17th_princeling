@@ -163,3 +163,17 @@ body {
     margin-left: 550px;
 
 }
+
+.eye-place1 {
+    position: absolute;
+    transform: translateY(-140%);
+    cursor: pointer;
+    margin-left: 600px;
+}
+
+.eye-place2 {
+    position: absolute;
+    transform: translateY(-240%);
+    cursor: pointer;
+    margin-left: 600px;
+}

@@ -31,6 +31,8 @@ Route::get('/profile/show', [ProfileController::class, 'show'])->name('profile.s
 
 Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
 
+Route::get('/profile/reset-password', [ProfileController::class, 'reset'])->name('profile.reset-password');
+
 Route::get('profile/show', [ChartController::class, 'showChart']);
 
 Route::get('/get-chart-data/{timeline}', [ChartController::class, 'getChartData']);
