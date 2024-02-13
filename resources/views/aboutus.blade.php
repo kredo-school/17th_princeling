@@ -19,7 +19,7 @@
      </li>
    </ul>
  </nav>
- <div class="opa-first"></div>
+ <div class="opa-first">
  <div class="aboutus-text">
   <h1 class="about1">What is <br>Princelling Project?</h1>
   <h1 class="about2">Empowering Your Health, <br>One Calorie at a Time</h1>
