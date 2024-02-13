@@ -75,12 +75,11 @@
             </div>
         </nav>
         @endif
-
         <main>
             @yield('content')
         </main>
     </div>
 </body>
 
-
 </html>
+
