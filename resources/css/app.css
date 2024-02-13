@@ -366,6 +366,20 @@ body {
 
 }
 
+
+.eye-place1 {
+    position: absolute;
+    transform: translateY(-140%);
+    cursor: pointer;
+    margin-left: 600px;
+}
+
+.eye-place2 {
+    position: absolute;
+    transform: translateY(-240%);
+    cursor: pointer;
+    margin-left: 600px;
+
 * {
     box-sizing: border-box;
   }
@@ -481,4 +495,5 @@ body {
 .loginpage {
   background-color: #ffff;
   padding: 120px;
+
 }
