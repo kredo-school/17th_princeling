@@ -16,5 +16,8 @@ class ProfileController extends Controller
 
     public function reset() {
         return view('profile.resetpassword');
+      
+    public function digit() {
+        return view('profile.digitcode');
     }
 }
