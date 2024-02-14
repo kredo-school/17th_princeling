@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ExerciseController;
 use App\Http\Controllers\ChartController;
 use App\Models\TimelineData;
 
@@ -32,6 +33,8 @@ Route::get('/profile/show', [ProfileController::class, 'show'])->name('profile.s
 Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
 
 Route::get('/profile/reset-password', [ProfileController::class, 'reset'])->name('profile.reset-password');
+
+Route::get('/exercise/index', [ExerciseController::class, 'index'])->name('exercise.index');
 
 Route::get('profile/show', [ChartController::class, 'showChart']);
 
