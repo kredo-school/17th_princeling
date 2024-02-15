@@ -1,9 +1,14 @@
 <?php
 
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ChartController;
+use App\Models\TimelineData;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\MealController;
+
 
 
 /*
@@ -31,4 +36,13 @@ Route::get('/', [PageController::class, 'firstPage'])->name('firstpage');
 Route::get('/about-us', [PageController::class, 'aboutUs'])->name('about-us');
 
 Route::get('/contact', [PageController::class, 'contact'])->name('contact');
+
+Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin');
+
+Route::get('/user/upmeal', [MealController::class, 'upmeal'])->name('upmeal');
+
+Route::post('/user/upmeal', [MealController::class, 'upmeal']);
+
+// Assuming YourController is the controller handling the form submission
+Route::post('/user/upmeal', [MealController::class, 'upmeal'])->name('user.upmeal');
 
