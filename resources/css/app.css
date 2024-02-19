@@ -200,6 +200,7 @@ h1.ContactDetail {
 body {
   background-color: #ffff;
 }
+
 .font-color1 {
     color: #0081A7;
 }
@@ -468,6 +469,7 @@ body {
   }
 
 
+
 .logo-size {
   width: 25%;
   height: 100px;
@@ -486,6 +488,18 @@ body {
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
+}
+
+.btn-centered {
+  display: block; /* Make button block-level for margin auto to work */
+  margin: 0 auto; /* Center button horizontally */
+  /* Additional styling as needed */
+}
+.mt-6 {
+  margin-top: 10rem; 
+}
+.mb-6 {
+  margin-bottom: 10rem; 
 }
 
 .registerpage {
@@ -574,3 +588,4 @@ body {
   .menu .item .price {
     padding-left: 5px;
   }
+

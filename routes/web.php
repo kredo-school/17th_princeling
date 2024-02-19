@@ -10,6 +10,7 @@ use App\Models\TimelineData;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\MealController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -35,6 +36,15 @@ Route::get('/', [PageController::class, 'firstPage'])->name('firstpage');
 Route::get('/about-us', [PageController::class, 'aboutUs'])->name('about-us');
 
 Route::get('/contact', [PageController::class, 'contact'])->name('contact');
+
+Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin');
+
+Route::get('/user/upmeal', [MealController::class, 'upmeal'])->name('upmeal');
+
+Route::post('/user/upmeal', [MealController::class, 'upmeal']);
+
+// Assuming YourController is the controller handling the form submission
+Route::post('/user/upmeal', [MealController::class, 'upmeal'])->name('user.upmeal');
 
 Route::get('/profile/show', [ProfileController::class, 'show'])->name('profile.show');
 
