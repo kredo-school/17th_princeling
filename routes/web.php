@@ -4,11 +4,11 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ExerciseController;
 use App\Http\Controllers\ChartController;
 use App\Models\TimelineData;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\MealController;
-
 
 
 /*
@@ -45,4 +45,18 @@ Route::post('/user/upmeal', [MealController::class, 'upmeal']);
 
 // Assuming YourController is the controller handling the form submission
 Route::post('/user/upmeal', [MealController::class, 'upmeal'])->name('user.upmeal');
+
+Route::get('/profile/show', [ProfileController::class, 'show'])->name('profile.show');
+
+Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
+
+Route::get('/profile/reset-password', [ProfileController::class, 'reset'])->name('profile.reset-password');
+
+Route::get('/profile/digit-code', [ProfileController::class, 'digit'])->name('digit');
+
+Route::get('/exercise/index', [ExerciseController::class, 'index'])->name('exercise.index');
+
+Route::get('profile/show', [ChartController::class, 'showChart']);
+
+Route::get('/get-chart-data/{timeline}', [ChartController::class, 'getChartData']);
 

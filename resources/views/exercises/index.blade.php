@@ -28,6 +28,11 @@
             </div>
         </nav>
 
+        <h2 class="fw-bold ms-2 mt-2 mb-3">
+            Exercise Diary
+            <span class="h5 ms-3">Let's burn calories!!!</span>
+        </h2>
+
         {{-- Create My Home --}}
         <div class="vertical-menu-container">
             <div class="vertical-menu">
@@ -50,67 +55,56 @@
           
             <div class="rightonopage ms-3 bg-color2" style="width: 1000px;">
                 <div class="row p-3">
+                    <div class="col-4 bg-white">
+                        put bar chart here
+                    </div>
+
+                    <div class="col-4 p-2">
+                        put pie chart here
+                    </div>
                     <div class="col-4">
-                        put image here
+                        <div class="row bg-white">
+                            <div class="col">
+                                <ul class="menu">
+                                    <li class="item">
+                                      <span id="square1" class="name"></span>
+                                      <span><hr class="hr2"></span>
+                                      <span class="price">steps</span>
+                                    </li>
+                                    <li class="item">
+                                      <span id="square2" class="name"></span>
+                                      <span class="price">cardiovascular</span>
+                                    </li>
+                                    <li class="item">
+                                      <span id="square3" class="name"></span>
+                                      <span class="price">strength training</span>
+                                    </li>
+                                    <li class="item">
+                                      <span id="square4" class="name"></span>
+                                      <span class="price">others</span>
+                                    </li>
+                                  </ul>
+                            </div>    
+                        </div>
+                        <div class="row">
+                            <img src="{{ asset('img/exercise.jpeg') }}" class="exercise-img" alt="Logo Image">
+                        </div>
                     </div>
-                    <div class="col-3 bg-white p-2">
-                        <h6>2024.01.01</h6>
-                        <h6 class="fw-bold">Breakfast</h6>
-                    </div>
-                    <div class="col-1"></div>
-                    <div class="col-3 bg-white p-3">
-                        <h4 class="fw-bold text-center">200</h4>
-                        <h6 class="text-muted text-center">kcal</h6>
-                    </div>
-                    <div class="col-1"></div>
                 </div>
 
-                <div class="row p-3">
-                    <div class="col-4">
-                        put image here
+                <div class="row p-3 ms-5">
+                    <div class="col-3 bg-white p-2" style="height: 150px">
+                        <h6 class="fw-bold">Cardiovascular</h6>
                     </div>
+                    <div class="col-1"></div>
                     <div class="col-3 bg-white p-2">
-                        <h6>2024.01.01</h6>
-                        <h6 class="fw-bold">Lunch</h6>
+                            <h6 class="fw-bold">Strength Training</h6>
                     </div>
-                    <div class="col-1"></div>
-                    <div class="col-3 bg-white p-3">
-                        <h4 class="fw-bold text-center">500</h4>
-                        <h6 class="text-muted text-center">kcal</h6>
-                    </div>
-                    <div class="col-1"></div>
-                </div>
-
-                <div class="row p-3">
-                    <div class="col-4">
-                        put image here
-                    </div>
-                    <div class="col-3 bg-white p-2">
-                        <h6>2024.01.01</h6>
-                        <h6 class="fw-bold">Dinner</h6>
-                    </div>
-                    <div class="col-1"></div>
-                    <div class="col-3 bg-white p-3">
-                        <h4 class="fw-bold text-center">700</h4>
-                        <h6 class="text-muted text-center">kcal</h6>
-                    </div>
-                    <div class="col-1"></div>
-                </div>
-
-                <div class="row p-3">
-                    <div class="col-4">
-                        put image here
-                    </div>
-                    <div class="col-3 bg-white p-2">
-                        <h6>2024.01.01</h6>
-                        <h6 class="fw-bold">Snacks</h6>
-                    </div>
-                    <div class="col-1"></div>
-                    <div class="col-3 bg-white p-3">
-                        <h4 class="fw-bold text-center">400</h4>
-                        <h6 class="text-muted text-center">kcal</h6>
-                    </div>
-                    <div class="col-1"></div>
+                        <div class="col-1"></div>
+                        <div class="col-3 bg-white p-2">
+                            <h6 class="fw-bold">Others</h6>
+                        </div>
+                        <div class="col-1"></div> 
                 </div>
             </div>
 
@@ -149,8 +143,4 @@
               });
             });
         </script>
-        
-    
-        
-
-        
+@endsection

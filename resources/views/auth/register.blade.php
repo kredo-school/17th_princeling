@@ -5,12 +5,13 @@
     <div class="row justify-content-center">
         <div class="col-7">
             <h2>put image here</h2>
+            <img src="{{ asset('img/register.jpeg') }}" class="img-size" alt="Register Image">
         </div>
 
         {{-- Create register --}}
         <div class="col">
             <h2 class="fw-bold">Create an Account</h2>
-            <p>Have your account? <a href="{{ route('login') }}" class="text-decoration-none">login</a></p>
+            <p>Have your account? <a href="{{ route('login') }}" class="text-decoration-none text-dark fw-bold">login</a></p>
             <br>
             <div class="row">
                 <div class="col">
@@ -42,7 +43,7 @@
             </div>
             <div class="row mt-4">
                 <div class="col text-center">
-                    <button type="submit" class="btn btn-primary">Sign up</button>
+                    <button type="submit" class="btn button-color1 text-white">Sign up</button>
                 </div>
             </div>
         </div>

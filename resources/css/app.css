@@ -1,11 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins");
 
-
-
-html, body-first {
-  font-family: 'Poppins', sans-serif;
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;  
+  padding-top: 56px;  
 }
 
+ 
+.navbar-nav {
+  display: flex;
+  justify-content: flex-end;
+}
+ 
 .opa-first {
   /* content: ''; */
   position: fixed;
@@ -13,18 +19,17 @@ html, body-first {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: url("C:\Users\tk112\Desktop\17th_Princeling\public\image\helathy_food.jpeg");
+  background-image: url('/public/image/helathy_food.jpeg');
   background-repeat: no-repeat;
-  background-size: cover; 
-  background-position: center; 
+  background-size: cover;
+  background-position: center;
   z-index: -1;
   overflow-y: auto;
   opacity: 0.8;
-
 }
 
 .bg-color1 {
-    background-color: #0081A7;
+  background-color: #0081a7;
 }
 .img-size-first {
   margin: 0;
@@ -33,60 +38,59 @@ html, body-first {
   margin-left: 20px;
 }
 
-.img-size-second{
+.img-size-second {
   margin: 0;
   width: 40%;
   object-fit: cover;
   margin-left: 20px;
 }
 
-
 .navbar-nav {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
 }
 
 .navbar-nav .nav-item {
-    list-style-type: none;
+  list-style-type: none;
+  padding: 10px;
 }
 
 .navbar-nav .nav-link {
-    color: #fff;
-    text-align: center;
-    text-decoration: none;
-    font-size: 24px;
-    display: block;
-    padding: 8px 15px;
-    border-radius: 10px
-
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-size: 24px;
+  display: block;
+  padding: 20px 15px;
+  border-radius: 10px;
 }
 
 .navbar-nav .nav-link:hover {
-    background-color: #00AFB7;
+  background-color: #00afb7;
 }
 .navbar {
-  padding: 0; 
+  padding: 0;
 }
 
-.banner-text{
+.banner-text {
   height: auto;
-  padding: 10px;
+  padding: 150px 20px 0;
   margin: 0;
-  width: 85%; /* set the width of the box to 80% of its parent container */
-  padding-bottom: 80%; /* set the height of the box to be the same as its width */
+  width: 85%;  
+  padding-bottom: 80%; 
 }
 
-h1.intro{
-    font-weight: bold;
-    font-size: 96px;
-    color: black;
-    margin: 250px auto 250px auto;
+h1.intro {
+  font-weight: 600;
+  font-size: 96px;
+  color: black;
+  padding: 50px 0;
 }
 
-.button{
+.button {
   border-radius: 4px;
-  background-color: #0081A7;
+  background-color: #0081a7;
   border: none;
   color: white;
   padding: 10px 50px;
@@ -98,74 +102,74 @@ h1.intro{
   cursor: pointer;
   margin-right: 30px;
 }
-a.button:hover{
-    background: #00AFB9;
+a.button:hover {
+  background: #00afb9;
 }
-.aboutus-text{
+.aboutus-text {
   width: 40%;
   margin-top: 10%;
   margin-left: 1%;
 }
-.about1{
+.about1 {
   text-align: center;
   font-size: 64px;
   margin-top: 50px;
   font-weight: bold;
 }
 
-.about2{
+.about2 {
   margin: 50px auto 50px auto;
   text-align: center;
   font-size: 48px;
 }
-.about3{
+.about3 {
   text-align: center;
   font-size: 24px;
 }
 
-.contact-text{
+.contact-text {
   width: 40%;
   margin-top: 15%;
 }
 
-h1.Contactmsg{
+h1.Contactmsg {
   font-size: 48px;
   color: black;
   margin: 150px auto 100px auto;
   text-align: center;
   font-weight: bold;
 }
-h1.ContactDetail{
+h1.ContactDetail {
   font-size: 32px;
   margin-bottom: 50px;
   text-align: center;
 }
 .font-color1 {
-  color: #0081A7;
+  color: #0081a7;
 }
 
 .bg-color1 {
-  background-color: #0081A7;
+  background-color: #0081a7;
 }
 
 .bg-color2 {
-  background-color: #FDFCDC;
+  background-color: #fdfcdc;
 }
 
 .button-color1 {
-  background-color: #0081A7;
+  background-color: #0081a7;
 }
 
 .button-color2 {
-  background-color: #F07167;
+  background-color: #f07167;
 }
 
-.button-color1:hover{
-  background-color: #00AFB9;
+.button-color1:hover {
+  background-color: #00afb9;
 }
 
 .button-color2:hover {
-  background-color: #FED9B7;
+  background-color: #fed9b7;
 }
 
 .img-size {
@@ -197,6 +201,275 @@ body {
   background-color: #ffff;
 }
 
+.font-color1 {
+    color: #0081A7;
+}
+
+.bg-color1 {
+    background-color: #0081A7;
+}
+
+.bg-color2 {
+    background-color: #FDFCDC;
+}
+
+.button-color1 {
+    background-color: #0081A7;
+}
+
+.button-color2 {
+    background-color: #F07167;
+}
+
+.button-color1:hover{
+    background-color: #00AFB9;
+}
+
+.button-color2:hover {
+    background-color: #FED9B7;
+}
+
+.img-size {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.logo-size {
+    width: 25%;
+    height: 100px;
+}
+
+.icon-size {
+    font-size: 3rem;
+}
+
+.registerpage {
+    background-color: #ffff;
+    padding: 100px;
+}
+
+.loginpage {
+    background-color: #ffff;
+    padding: 120px;
+}
+
+body {
+    background-color: #ffff;
+}
+
+.vertical-menu-container {
+    display: flex;
+  }
+  
+  .vertical-menu {
+    width: 200px;
+    height: 100vh;
+    overflow-y: auto;
+    background-color: #ffff;  
+  }
+  
+  .vertical-menu a {
+    background-color: #ffff;
+    color: black;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+  }
+  
+  .vertical-menu a:hover {
+    background-color: #ccc;
+  }
+  
+  .vertical-menu a.active {
+    background-color: #ffff;
+  }
+  
+   
+  .submenu {
+    display: none;
+  }
+  
+  .vertical-menu .active + .submenu,
+  .vertical-menu a:hover + .submenu {
+    display: block;
+  }
+  
+  .submenu a {
+    background-color: #ffff;
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .submenu a:hover {
+    background-color: #bbb;
+  }
+  
+  .rightonpage {
+    flex: 1;
+    padding: 20px;
+    background-color: #FDFCDC;
+  }
+
+  .progress{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    background-color: #ffff;
+}
+
+.outer{
+    height: 200px;
+    width: 200px;
+    padding: 20px;
+    border-radius: 50%;
+    background-color: #FED9B7;
+    /* box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+    -6px -6px 10px -1px rgba(255, 255, 255, 0.7); */
+    
+}
+
+.inner{
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    background-color: #ffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2), inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+    -0.5px -0.5px 0px rgba(255, 255, 255, 1), 0.5px 0.5px 0px rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0.05); */
+}
+
+#cals{
+    font-weight: 600;
+    color: #555;
+}
+
+.hr1 {
+    width: 100%;
+}
+
+.input {
+    margin-right: 10px;
+    padding: 10px;
+}
+
+.text-field {
+    display: flex;
+    align-items: center;
+}
+
+.confirm-button {
+    margin-left: 550px;
+
+}
+
+
+.eye-place1 {
+    position: absolute;
+    transform: translateY(-140%);
+    cursor: pointer;
+    margin-left: 600px;
+}
+
+.eye-place2 {
+    position: absolute;
+    transform: translateY(-240%);
+    cursor: pointer;
+    margin-left: 600px;
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+  /* body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+  } */
+  
+  h1 {
+    /* margin-bottom: 0; */
+    font-size: 2rem;
+    font-weight: 200;
+  }
+  
+  form {
+    /* margin: 3rem 0; */
+    border-radius: 0.5rem;
+    /* border-color: #555; */
+    background: #ffffff;
+    /* box-shadow: 28px 28px 56px #d9d9d9, -28px -28px 56px #ffffff; */
+  }
+  
+  fieldset {
+    border: none;
+  }
+  
+  legend {
+    font-size: 0;
+  }
+  
+  .dg-code {
+    width: 4rem;
+    height: 4rem;
+    font-size: 2rem;
+    text-align: center;
+    border-color: #5e5e5e;
+    border-radius: 0.5rem;
+    margin-left: 1rem;
+    /* box-shadow:  28px 28px 56px #d9d9d9, -28px -28px 56px #ffffff; */
+  }
+
+  .dg-code-place {
+    margin-left: 30%;
+    margin-top: 60px;
+  }
+  
+  /* @media only screen and (min-width: 600px) {
+    form {
+      padding: 4rem 3rem;
+    }
+    
+    input {
+      width: 4rem;
+      height: 4rem;
+      font-size: 3rem; 
+    }
+    
+    input + input {
+      margin-left: 1rem;
+    }
+  } */
+  
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  /* Firefox */
+  /* input[type=number] {
+    appearance: textfield;
+  } */
+
+  .verify-button {
+    margin-left: 485px;
+    margin-top: 100px;
+    padding: 10px;
+    font-size: 1.2rem;
+  }
+
+
+
 .logo-size {
   width: 25%;
   height: 100px;
@@ -216,6 +489,7 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
 .btn-centered {
   display: block; /* Make button block-level for margin auto to work */
   margin: 0 auto; /* Center button horizontally */
@@ -227,3 +501,91 @@ body {
 .mb-6 {
   margin-bottom: 10rem; 
 }
+
+.registerpage {
+  background-color: #ffff;
+  padding: 100px;
+}
+
+.loginpage {
+  background-color: #ffff;
+  padding: 120px;
+
+}
+
+#square1 {
+    margin: 10px;
+    width: 10px;
+    height: 10px;
+    background-color: #FED9B7;
+}
+
+#square2 {
+    margin: 10px;
+    width: 10px;
+    height: 10px;
+    background-color: #00afb9;
+}
+
+#square3 {
+    margin: 10px;
+    width: 10px;
+    height: 10px;
+    background-color: #F07167;
+}
+
+#square4 {
+    margin: 10px;
+    width: 10px;
+    height: 10px;
+    background-color: #adadad;
+}
+
+.hr2 {
+    border: none;
+    border-top: 1px dotted #999;
+}
+
+.exercise-img {
+    margin-top: 20px;
+    width: 100%;
+    height: 200px;
+}
+
+.menu .item {
+    position: relative;
+    /* display: -webkit-box;
+    display: -ms-flexbox; */
+    display: flex;
+    /* -webkit-box-pack: justify;
+    -ms-flex-pack: justify; */
+    /* justify-content: flex-start; */
+    /* -webkit-box-align: center;
+    -ms-flex-align: center; */
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  .menu .item::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    z-index: -1;
+    width: 100%;
+    border-bottom: dotted 2px #6b6b6b;
+  }
+  
+  .menu .item .name,
+  .menu .item .price {
+    display: inline-block;
+    background-color: #fff; 
+  }
+  
+  .menu .item .name {
+    padding-right: 5px;
+  }
+  
+  .menu .item .price {
+    padding-left: 5px;
+  }
+

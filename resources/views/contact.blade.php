@@ -19,7 +19,7 @@
      </li>
    </ul>
  </nav>
- <div class="opa-first"></div>
+ <div class="opa-first">
  <a href="{{ route('register') }}" class="text-decoration-none">Register</a>
 
           <div class="banner" id="banner">
