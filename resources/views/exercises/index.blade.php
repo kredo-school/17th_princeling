@@ -6,12 +6,12 @@
                 <img src="{{ asset('img/logo 1.jpg') }}" class="logo-size" alt="Logo Image">            
             </div>
             <div class="col">
-                <a href="#" class="text-decoration-none float-end text-dark icon-size me-5"><i class="fa-solid fa-circle-user"></i></a>
+                <a href="{{ route('profile.edit') }}" class="text-decoration-none float-end text-dark icon-size me-5"><i class="fa-solid fa-circle-user"></i></a>
             </div>    
         </div>
         
         <nav class="navbar navbar-expand-lg bg-color1 position-relative">
-            <a class="navbar-brand text-white ms-3 fw-bold" href="#">My Home</a>
+            <a class="navbar-brand text-white ms-3 fw-bold" href="{{ route('homepage') }}">My Home</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -22,7 +22,7 @@
                         <a class="nav-link text-white" href="#">Upload Meal</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Exercises</a>
+                        <a class="nav-link text-white" href="{{ route('exercise.index') }}">Exercises</a>
                     </li>
                 </ul>
             </div>
