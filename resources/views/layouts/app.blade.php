@@ -11,6 +11,7 @@
 
     {{-- Fontawesome --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
@@ -21,7 +22,7 @@
 </head>
 <body>
     <div id="app">
-    @if(!request()->is('user/home') || request()->is('/'))
+    @if(!request()->is('user/home') && request()->is('/') && request()->is('profile/show') && request()->is('profile/edit'))
         <nav class="navbar navbar-expand-md navbar-light bg-color1 shadow-sm">
         <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -75,12 +76,11 @@
             </div>
         </nav>
         @endif
-
-        <main class="py-4">
+        <main>
             @yield('content')
         </main>
     </div>
 </body>
 
-
 </html>
+
