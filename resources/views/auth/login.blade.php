@@ -12,23 +12,36 @@
             <h2 class="fw-bold">Log in</h2>
             <p>Don't have your account? <a href="{{ route('register') }}" class="text-decoration-none text-dark fw-bold">Sign up</a></p>
             <br>
-            <div class="row">
-                <div class="col">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" name="email" id="email"  class="form-control">
+            <form method="POST" action="{{ route('login') }}">
+                @csrf
+                <div class="row">
+                    <div class="col">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" name="email" id="email"  class="form-control">
+                        @error('email')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                    </div>
                 </div>
-            </div>
-            <div class="row mt-2">
-                <div class="col">
-                    <label for="password" class="form-label">Password</label>
-                    <input type="password" name="password" id="password"  class="form-control">    
+                <div class="row mt-2">
+                    <div class="col">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" name="password" id="password"  class="form-control">
+                        @error('password')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror    
+                    </div>
                 </div>
-            </div>
-            <div class="row mt-4">
-                <div class="col text-center">
-                    <button type="submit" class="btn button-color1 text-white">Log in</button>
+                <div class="row mt-4">
+                    <div class="col text-center">
+                        <button type="submit" class="btn button-color1 text-white">Log in</button>
+                    </div>
                 </div>
-            </div>
+            </form>
         </div>
 
         {{-- <div class="col-md-8">
