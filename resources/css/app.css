@@ -28,6 +28,26 @@ body {
   opacity: 0.8;
 }
 
+.avatar-lg {
+  width: 9rem;
+  height: 9rem;
+  object-fit: cover;
+}
+
+.icon-lg {
+  font-size: 9rem;
+}
+
+.icon-sm {
+  font-size: 3rem;
+}
+
+.avatar-sm {
+  width: 3rem;
+  height: 3rem;
+  object-fit: cover;
+}
+
 .bg-color1 {
   background-color: #0081a7;
 }

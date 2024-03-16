@@ -56,7 +56,7 @@ Route::get('/profile/digit-code', [ProfileController::class, 'digit'])->name('di
 
 Route::get('/exercise/index', [ExerciseController::class, 'index'])->name('exercise.index');
 
-Route::get('profile/show', [ChartController::class, 'showChart']);
+// Route::get('profile/show', [ChartController::class, 'showChart']);
 
 Route::get('/get-chart-data/{timeline}', [ChartController::class, 'getChartData']);
 
