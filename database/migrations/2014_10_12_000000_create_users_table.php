@@ -15,9 +15,16 @@ return new class extends Migration
             $table->id();
             $table->string('first_name');
             $table->string('last_name');
+            $table->string('username')->nullable();
             $table->string('email')->unique();
             $table->string('password');
-            $table->rememberToken();
+            $table->tinyInteger('gender')->nullable();
+            $table->date('birthdate')->nullable();
+            $table->longText('avatar')->nullable();
+            $table->decimal('height',4,1)->nullable();
+            $table->decimal('weight',4,1)->nullable();
+            $table->decimal('target_weight',4,1)->nullable();
+            $table->string('introduction', 250)->nullable();
             $table->timestamps();
         });
     }

@@ -3,17 +3,43 @@
 @section('content')
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+    <script src="/js/bmi.js"></script>
+
     <div class="row">
         <div class="col">
             <img src="{{ asset('img/logo 1.jpg') }}" class="logo-size" alt="Logo Image">            
         </div>
         <div class="col">
-            <a href="#" class="text-decoration-none float-end text-dark icon-size me-5"><i class="fa-solid fa-circle-user"></i></a>
+            <ul class="navbar-nav" style="align-items: flex-end">
+                <li class="nav-item dropdown">
+                    <button id="account-dropdown" class="btn shadow-none nav-link" data-bs-toggle="dropdown">
+                        @if($user && $user->avatar)
+                            <img src="{{$user->avatar}}" alt="{{$user->name}}" class="rounded-circle avatar-sm">
+                        @else
+                            <i class="fa-solid fa-circle-user text-dark icon-sm"></i>
+                        @endif
+                    </button>
+
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="account-dropdown">
+                        <a href="{{route('profile.show')}}" class="dropdown-item">
+                            <i class="fa-solid fa-circle-user"></i> Profile
+                        </a>
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">
+                            <i class="fa-solid fa-right-from-bracket"></i> {{ __('Logout') }}
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                    </div>
+                </li>
+            </ul>
         </div>    
     </div>
         
     <nav class="navbar navbar-expand-lg bg-color1 position-relative">
-        <a class="navbar-brand text-white ms-3 fw-bold" href="#">My Home</a>
+        <a class="navbar-brand text-white ms-3 fw-bold" href="{{route('homepage')}}">My Home</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -21,10 +47,10 @@
         <div class="collapse navbar-collapse position-absolute end-0" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link text-white" href="#">Upload Meal</a>
+                    <a class="nav-link text-white" href="{{route('upmeal')}}">Upload Meal</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Exercises</a>
+                    <a class="nav-link text-white" href="{{route('exercise.index')}}">Exercises</a>
                 </li>
             </ul>
         </div>
@@ -33,82 +59,95 @@
     {{-- Create User's Profile --}}
     <div class="container">
         <div class="row mt-2">
-            <div class="col-3">
-                user's image
+            <div class="col-3 mx-auto mt-5">
+                @if($user && $user->avatar)
+                    <img src="{{$user->avatar}}" alt="{{$user->name}}" class="img-thumbnail rounded-circle d-block mx-auto avatar-lg">
+                @else
+                    <i class="fa-solid fa-circle-user text-secondary d-block text-center icon-lg"></i>
+                @endif
             </div>
             <div class="col-6">
-                <form action="#" method="POST">
+                {{-- <form action="#" method="POST"> --}}
                     <div class="row">
                         <div class="col-6">
-                            <label for="first-name" class="form-label">First Name</label>
-                            <input type="text" name="first-name" id="first-name" class="form-control">
+                            <label for="first_name" class="form-label">First Name</label>
+                            <input type="text" name="first_name" id="first_name" class="form-control" value="{{ isset($user) ? $user->first_name : '' }}" readonly="readonly">
                         </div>
                         <div class="col-6">
-                            <label for="last-name" class="form-label">Last Name</label>
-                            <input type="text" name="last-name" id="last-name" class="form-control">
+                            <label for="last_name" class="form-label">Last Name</label>
+                            <input type="text" name="last_name" id="last_name" class="form-control" value="{{ isset($user) ? $user->last_name : '' }}" readonly="readonly">
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row mt-3">
                         <div class="col-6">
                             <label for="gender" class="form-label">Gender</label>
-                            <input type="text" name="gender" id="gender" class="form-control">
+                            <input type="text" name="gender" id="gender" class="form-control" value="{{ isset($user) ? $user->gender : '' }}" readonly="readonly">
                         </div>
                         <div class="col-6">
-                            <label for="birthday" class="form-label">Birthday</label>
-                            <input type="date" name="birthday" id="birthday" class="form-control">
+                            <label for="birthdate" class="form-label">Birthdate</label>
+                            <input type="date" name="birthdate" id="birthdate" class="form-control" value="{{ isset($user) ? $user->birthdate : '' }}" readonly="readonly">
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row mt-3">
                         <div class="col-12">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" name="email" id="email" class="form-control">
+                            <input type="email" name="email" id="email" class="form-control" value="{{ isset($user) ? $user->email : '' }}" readonly="readonly">
                         </div>
                     </div>
                     <hr class="hr1">
                     <div class="row">
                         <div class="col-6">
                             <label for="username" class="form-label">Username</label>
-                            <input type="text" name="username" id="username" class="form-control">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-6">
-                            <label for="height" class="form-label">Height</label>
-                            <div class="text-field">
-                                <input type="number" name="height" id="height" class="form-control">
-                                <span class="add-on input">cm</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-4">
-                            <label for="weight" class="form-label">Weight</label>
-                            <div class="text-field">
-                                <input type="number" name="weight" id="weight" class="form-control">
-                                <span class="add-on input">kg</span>  
-                            </div>                            
-                        </div>                       
-                        <div class="col-4">
-                            <label for="target-weight" class="form-label fw-bold">Target Weight</label>
-                            <div class="text-field">
-                                <input type="number" name="target-weight" id="target-weight" class="form-control">
-                                <span class="add-on input">kg</span>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <label for="bmi" class="form-label fw-bold">BMI</label>
-                            <input type="number" name="bmi" id="bmi" class="form-control">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <label for="introduction" class="form-label">Introduction</label>
-                            <textarea class="form-control" id="introduction" rows="3"></textarea>
+                            <input type="text" name="username" id="username" class="form-control" value="{{ isset($user) ? $user->username : '' }}" readonly="readonly">
                         </div>
                     </div>
                     <div class="row mt-3">
+                        <div class="col-4">
+                            <label for="target_weight" class="form-label fw-bold">Target Weight</label>
+                            <div class="text-field">
+                                <input type="number" name="target_weight" id="target_weight" class="form-control" value="{{ isset($user) ? $user->target_weight : '' }}" readonly="readonly">
+                                <span class="add-on input">kg</span>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="form-inline">
+                        <div class="row mt-3">
+                            <div class="col-4">
+                                <label for="height" class="form-label">Height</label>
+                                <div class="text-field">
+                                    <input type="number" name="height" id="height" class="input form-control" value="{{ isset($user) ? $user->height : '' }}">
+                                    <span class="add-on input">cm</span>
+                                </div>                          
+                            </div>                       
+                            <div class="col-4">
+                                <label for="weight" class="form-label">Weight</label>
+                                <div class="text-field">
+                                    <input type="number" name="weight" id="weight" class="input form-control" value="{{ isset($user) ? $user->weight : '' }}" readonly>
+                                    <span class="add-on input">kg</span>  
+                                </div>  
+                            </div>
+                            <div class="col-4">
+                                <button type="button" class="btn button-color1 text-white mt-4 btn-lg" id="btn-calculate">Calculate</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="row mt-3">
+                        <div class="col-4">
+                            <label for="bmi" class="form-label fw-bold">BMI</label>
+                            <input diabled type="number" name="bmi" id="bmi-result" class="input form-control" readonly>
+                            <p class="info-text">Weight Condition : <span id="weight-condition"></span></p>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-12">
+                            <label for="introduction" class="form-label">Introduction</label>
+                            <textarea class="form-control" id="introduction" rows="3" value="{{ isset($user) ? $user->introduction : '' }}" readonly="readonly"></textarea>
+                        </div>
+                    </div>
+                    <div class="row mt-5 mb-5">
                         <div class="col-6">
-                            <button type="submit" class="btn button-color1 text-white w-100">Edit Profile</button>
+                            <a href="{{route('profile.edit')}}" type="submit" class="btn button-color1 text-white w-100">Edit Profile</a>
                         </div>
                         <div class="col-6">
                             <form action="#" method="POST">
@@ -118,7 +157,7 @@
                             </form>
                         </div>
                     </div>                     
-                </form>            
+                {{-- </form>             --}}
             </div>
         
             <div class="col-3">
